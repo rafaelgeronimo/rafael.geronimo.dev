@@ -1,0 +1,62 @@
+.headerContainer {
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--gray-50);
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    ul {
+      display: flex;
+      // margin-left: auto;
+      list-style-type: none;
+      margin: 0 3rem;
+      li {
+        font-family: 'Mada', sans-serif;
+        color: #2c2d2e;
+        margin: 0 0.4rem;
+        display: flex;
+        font-size: 1.125rem;
+        padding: 0 0.4rem;
+        a {
+          display: inline-flex;
+          align-items: center;
+        }
+        .menuIcon {
+          font-size: 1.25rem;
+          margin-right: 0.2rem;
+        }
+      }
+    }
+    @media screen and (max-width: 600px) {
+      // display: none;
+      ul {
+        margin: 0 0.2rem;
+      }
+    }
+    .socialMediaMenu {
+      margin-top: auto;
+      :hover {
+        cursor: pointer;
+      }
+      .githubIcon:hover {
+        color: #171515;
+      }
+      :nth-child(2):hover {
+        color: #0e76a8;
+      }
+      :nth-child(3):hover {
+        color: #25D366;
+      }
+      li {
+        font-size: 1.250rem;
+      }
+      // @media screen and (max-width: 600px) {
+      //   display: none;
+      // }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.markdown pre {
+  box-sizing: border-box;
+  margin: 0 0 1.75rem 0;
+  border: #E3EDF3 1px solid;
+  width: 100%;
+  padding: 10px;
+  font-family: monospace, sans-serif;
+  white-space: pre;
+  overflow: auto;
+  background-color: #F7FAFB;
+  border-radius: 3px;
+}
+
+.markdown pre code {
+  display: block;
+  color: #212529;
+  font-size: 1.125rem;
+}
+
+.markdown code {
+  color: #E83E8C;
+}
+
+.markdown ul {
+  display: block;
+  list-style: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.markdown li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.markdown a {
+  text-decoration: none;
+  color: #00AB6B;
+}
+
+.markdown blockquote {
+  border-left: 4px solid #00AB6B;
+  padding: 0 20px;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.5);
+}

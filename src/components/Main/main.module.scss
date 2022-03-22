@@ -1,0 +1,42 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: calc(100vh - 3.5rem);
+  .title {
+    text-align: center;
+    font-size: 10rem;
+    img {
+      border-radius: 50%;
+    }
+    h1 {
+      font-family: 'Mada', sans-serif;
+      font-size: 3.125rem;
+      font-weight: 400;
+    }
+    h3 {
+      font-family: 'Mada', sans-serif;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  }
+  p {
+    width: 75vw;
+    max-width: 760px;
+    text-align: justify;
+  }
+  .technologies {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 75vw;
+    max-width: 760px;
+    .badges {
+      margin-top: 1.2rem;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}
