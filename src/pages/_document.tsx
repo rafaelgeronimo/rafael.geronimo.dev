@@ -5,9 +5,8 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document";
-// eslint-disable-next-line @next/next/no-script-in-document
 import Script from "next/script";
-import { GA_TRACKING_ID } from "../utils/gtag";
+// import { GA_TRACKING_ID } from "../utils/gtag";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -54,10 +53,10 @@ export default class MyDocument extends Document {
           <meta name="author" content="Rafael Gerônimo" />
           {/* <title>Rafael Gerônimo</title> */}
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
+          {/* <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
+          /> */}
           {/* <script
             dangerouslySetInnerHTML={{
               __html: `
