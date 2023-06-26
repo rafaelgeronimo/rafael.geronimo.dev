@@ -22,8 +22,8 @@ export default class MyDocument extends Document {
           <meta name="revisit-after" content="2 days"/>
           <meta name="author" content="Rafael Gerônimo"/>
           {/* <title>Rafael Gerônimo</title> */}
-          {/* Counter Tracker - https://counter.dev/*/}
-          <script src="https://cdn.counter.dev/script.js" data-id="5ac0e88a-a37b-40a5-96ac-f2c89e449adb" data-utcoffset="-3"></script>
+          {/* Counter Analytics - https://counter.dev/*/}
+          <script async src="https://cdn.counter.dev/script.js" data-id="5ac0e88a-a37b-40a5-96ac-f2c89e449adb" data-utcoffset="-3"></script>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
