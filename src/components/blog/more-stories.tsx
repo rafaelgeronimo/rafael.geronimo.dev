@@ -15,7 +15,7 @@ export default function MoreStories({ posts }: MoreStoriesProps) {
           <PostPreview
             key={post.id}
             slug={post.slug}
-            cover={post.cover}
+            cover={post?.cover || null}
             title={post.title}
             date={post.date}
             author={post.author}

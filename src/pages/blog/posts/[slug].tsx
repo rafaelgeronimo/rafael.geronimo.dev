@@ -38,7 +38,7 @@ const Post = ({ content, post }: InferGetStaticPropsType<typeof getStaticProps>)
               <PostHeader
                 title={post.title}
                 description={post.description}
-                cover={post.cover}
+                cover={post?.cover || null}
                 date={post.date}
                 author={post.author}
                 avatar={post.avatar}
