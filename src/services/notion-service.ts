@@ -1,7 +1,7 @@
 import { Client } from '@notionhq/client'
 import { BlogPost, PostPage } from '../../@types/schema'
 import { NotionToMarkdown } from 'notion-to-md'
-
+require('dotenv').config();
 export default class NotionService {
   client: Client
   n2m: NotionToMarkdown
@@ -40,12 +40,19 @@ export default class NotionService {
     const response = await this.client.databases.query({
       database_id: database,
       filter: {
-        property: 'Slug',
-        formula: {
-          text: {
-            equals: slug
-          }
-        },
+        or: [
+          {
+            property: 'Slug',
+            text: {
+              equals: slug
+            }
+          } as any
+        ]      
+        // formula: {
+        //   text: {
+        //     equals: slug
+        //   }
+        // },
         // adicionar opções para as tags aqui
       },
       sorts: [
