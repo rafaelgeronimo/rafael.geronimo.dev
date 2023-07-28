@@ -1,5 +1,5 @@
 // import styles from './about.module.scss';
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/about.module.scss";
 import profilePic from "../../img/profile.png";
 import Link from "next/link";

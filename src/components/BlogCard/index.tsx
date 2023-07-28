@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react'
 import Link from 'next/link'
 import { BlogPost } from '../../../@types/schema'
 import dayjs from 'dayjs'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import styles from '../../styles/blog.module.scss'
 
 type BlogCardProps = {
