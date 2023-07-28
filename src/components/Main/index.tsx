@@ -30,7 +30,7 @@ export function Main() {
         Unicesumar, tenho sempre buscado aperfeiçoar os meus conhecimentos na área para que possa
         superar qualquer desafio que aparecer.
         <strong>
-          <Link href='/about'><a> Saiba mais aqui</a></Link>
+          <Link href='/about'> Saiba mais aqui</Link>
         </strong>.
       </p>
       <section className={ `animate__animated animate__slideInUp ${styles.technologies}` }>
@@ -87,5 +87,5 @@ export function Main() {
         </div>
       </section>
     </main>
-  )
+  );
 }

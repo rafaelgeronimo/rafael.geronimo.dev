@@ -10,20 +10,20 @@ export default function Share() {
       <p>Compartilhe</p>
       <ul>
         <li>
-          <Link href={facebookUrl}>
-            <a target="_blank">
+          <Link href={facebookUrl} target="_blank">
+            
               Facebook
-            </a>
+            
           </Link>
         </li>
         <li>
-          <Link href={twitterShareLink}>
-            <a target="_blank">
+          <Link href={twitterShareLink} target="_blank">
+            
               Twitter
-            </a>
+            
           </Link>
         </li>
       </ul>
     </div>
-  )
+  );
 }

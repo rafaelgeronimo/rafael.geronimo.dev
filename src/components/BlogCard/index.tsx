@@ -13,45 +13,45 @@ dayjs.extend(localizedFormat).locale('pt-br')
 
 const BlogCard: FunctionComponent<BlogCardProps> = ({ post }) => {
   return (
-    <Link href={`/post/${post.slug}`}>
-      <a>
-        <div key={post.title}>
+    (<Link href={`/post/${post.slug}`}>
+
+      <div key={post.title}>
+        <div>
+          <Image
+            src={post.cover}
+            alt={`Imagem de capa para ${post.title}`}
+            width={1200}
+            height={300}
+            layout='responsive'
+            className={ styles.coverImage }
+          />
+        </div>
+        <div>
           <div>
-            <Image
-              src={post.cover}
-              alt={`Imagem de capa para ${post.title}`}
-              width={1200}
-              height={300}
-              layout='responsive'
-              className={ styles.coverImage }
-            />
-          </div>
-          <div>
-            <div>
-              <span>
-                {/* <h4>{dayjs(post.date).format('LL')}</h4> */}
-              </span>
-              <span>
-                <h3>{post.title}</h3>
-              </span>
-              <span>
-                <p>{post.description}</p>
-              </span>
-              <span>
-                {
-                  post.tags.map(tag => (
-                    <span key={tag.id}>
-                      #{tag.name}
-                    </span>
-                  ))
-                }
-              </span>
-            </div>
+            <span>
+              {/* <h4>{dayjs(post.date).format('LL')}</h4> */}
+            </span>
+            <span>
+              <h3>{post.title}</h3>
+            </span>
+            <span>
+              <p>{post.description}</p>
+            </span>
+            <span>
+              {
+                post.tags.map(tag => (
+                  <span key={tag.id}>
+                    #{tag.name}
+                  </span>
+                ))
+              }
+            </span>
           </div>
         </div>
-      </a>
-    </Link>
-  )
+      </div>
+
+    </Link>)
+  );
 }
 
 export default BlogCard

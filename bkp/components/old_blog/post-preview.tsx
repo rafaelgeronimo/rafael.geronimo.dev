@@ -24,7 +24,7 @@ export default function PostPreview ({
       </div>
       <h3>
         <Link as={`/blog/posts/${slug}`} href="/blog/posts/[slug]">
-          <a>{title}</a>
+          {title}
         </Link>
       </h3>
       <p>{excerpt}</p>
@@ -33,5 +33,5 @@ export default function PostPreview ({
       </div>
       <Avatar name={author.name} picture={author.picture} />
     </div>
-  )
+  );
 }

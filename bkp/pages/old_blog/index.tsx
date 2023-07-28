@@ -5,7 +5,7 @@ import Intro from "../../components/old_blog/intro";
 import Layout from "../../components/old_blog/layout";
 import { getAllPosts } from '../../lib/api';
 import Head from 'next/head'
-import Post from '../../types/post'
+// import Post from '../../types/post'
 import styles from '../../styles/blog.module.scss'
 
 import 'animate.css'
@@ -15,6 +15,7 @@ type Props = {
 }
 
 export default function Index({ allPosts }: Props) {
+  console.log(allPosts);  
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
   return (

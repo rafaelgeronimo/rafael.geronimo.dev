@@ -35,7 +35,7 @@ export default function About() {
         <p className={`animate__animated animate__bounceIn`}>
           Em abril de 2022, fui descoberto pela{" "}
           <Link href={`https://wolven.com.br`}>
-            <a>Wolven</a>
+            Wolven
           </Link>
           , onde trabalho como desenvolvedor de softwares.
         </p>

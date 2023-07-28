@@ -22,12 +22,12 @@ export default function CoverImage({ title, src, slug }: Props) {
   return (
     <div className={styles.coverImage}>
       {slug ? (
-        <Link as={`/blog/posts/${slug}`} href='/blog/posts/[slug]'>
-          <a aria-label={title}>{image}</a>
+        <Link as={`/blog/posts/${slug}`} href='/blog/posts/[slug]' aria-label={title}>
+          {image}
         </Link>
       ) : (
         image
       )}
     </div>
-  )
+  );
 }

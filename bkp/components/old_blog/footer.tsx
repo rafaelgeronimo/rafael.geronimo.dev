@@ -14,14 +14,14 @@ export default function Footer() {
           </h3>
           <div>
             <Link href="/">
-              <a>Home</a>
+              Home
             </Link>
             <Link href="/blog">
-              <a>Blog</a>
+              Blog
             </Link>
           </div>
         </div>
       </Container>
     </footer>
-  )
+  );
 }

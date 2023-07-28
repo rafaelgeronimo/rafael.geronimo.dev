@@ -20,19 +20,19 @@ export function Navbar() {
         <ul className={ styles.navigationMenu }>
           <li>
             <Link href="/">
-              <a><FaHome className={ styles.menuIcon } /> Home</a>
+              <FaHome className={ styles.menuIcon } />Home
             </Link>
           </li>
           <li>
             <Link href="/about">
-              <a><FaAddressCard className={ styles.menuIcon } /> Sobre</a>
+              <FaAddressCard className={ styles.menuIcon } />Sobre
             </Link>            
           </li>
           {/* <li>Portfolio</li>
           <li>Clientes</li> */}
           <li>
             <Link href="/blog">
-              <a><FaNewspaper className={ styles.menuIcon } /> Blog</a>
+              <FaNewspaper className={ styles.menuIcon } />Blog
             </Link>            
           </li>
           {/* <li>
@@ -43,24 +43,26 @@ export function Navbar() {
         </ul>
         <ul className={ styles.socialMediaMenu }>
           <li>
-            <Link href="https://github.com/rafaelgeronimo">
-              <a target="_blank">
-                <FaGithubSquare className={ styles.githubIcon } />
-              </a>
+            <Link href="https://github.com/rafaelgeronimo" target="_blank">
+
+              <FaGithubSquare className={ styles.githubIcon } />
+
             </Link>
           </li>
           <li>
-            <Link href="https://linkedin.com/in/rafaelgeronimo">
-              <a target="_blank">
-                <FaLinkedin />
-              </a>
+            <Link href="https://linkedin.com/in/rafaelgeronimo" target="_blank">
+
+              <FaLinkedin />
+
             </Link>
           </li>
           <li>
-            <Link href="https://api.whatsapp.com/send?phone=5541984375647&text=Ol%C3%A1%20Rafael!">
-              <a target="_blank">
-                <FaWhatsappSquare />
-              </a>
+            <Link
+              href="https://api.whatsapp.com/send?phone=5541984375647&text=Ol%C3%A1%20Rafael!"
+              target="_blank">
+
+              <FaWhatsappSquare />
+
             </Link>
           </li>
         </ul>
@@ -69,5 +71,5 @@ export function Navbar() {
         {/* <li><FaMoon /></li> */}
       </ul>
     </header>
-  )
+  );
 }
