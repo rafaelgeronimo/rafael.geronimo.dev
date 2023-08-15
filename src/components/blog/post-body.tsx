@@ -6,6 +6,10 @@ type Props = {
 }
 
 export default function PostBody({ content }: Props) {
+  // console.log('Estou no postbody');
+  // console.log('Content type: ', typeof(content));
+  // console.log('Content content: ', content);
+  
   return (
     <div className={ styles.postBody }>
       <div

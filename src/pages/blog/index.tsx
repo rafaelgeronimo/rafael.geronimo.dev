@@ -14,6 +14,8 @@ type Props = {
 
 export default function Index({ allPosts }: Props) {
   const heroPost = allPosts[0]
+  // console.log(heroPost);
+  
   const morePosts = allPosts.slice(1)
   return (
     <>
@@ -44,6 +46,7 @@ export default function Index({ allPosts }: Props) {
 export const getStaticProps = async () => {
   const notionService = new NotionService()
   const allPosts = await notionService.getPublishedBlogPosts()
+  // console.log(allPosts)
   return {
     props: { allPosts },
   }

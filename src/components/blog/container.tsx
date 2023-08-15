@@ -5,7 +5,7 @@ type ContainerProps = {
   children?: ReactNode
 }
 
-const Container: FunctionComponent = ({ children }: ContainerProps) => {
+const Container: FunctionComponent<ContainerProps> = ({ children }) => {
   return <div className={ styles.container }>{children}</div>
 }
 

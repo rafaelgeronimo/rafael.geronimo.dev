@@ -12,7 +12,7 @@ export default class NotionService {
   }
 
   async getPublishedBlogPosts(): Promise<BlogPost[]> {
-    const database = process.env.NOTION_BLOG_DATABASE_ID ?? ''    
+    const database = process.env.NOTION_BLOG_DATABASE_ID ?? ''
     const response = await this.client.databases.query({
       database_id: database,
       filter: {
@@ -40,14 +40,18 @@ export default class NotionService {
     const response = await this.client.databases.query({
       database_id: database,
       filter: {
-        or: [
-          {
-            property: 'Slug',
-            text: {
-              equals: slug
-            }
-          } as any
-        ]      
+        property: 'Slug',
+        rich_text: {
+          equals: slug
+        },
+        // or: [
+        //   {
+        //     property: 'Slug',
+        //     text: {
+        //       equals: slug
+        //     }
+        //   } as any
+        // ]      
         // formula: {
         //   text: {
         //     equals: slug

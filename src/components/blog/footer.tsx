@@ -1,8 +1,9 @@
 import Container from "./container";
 import Link from "next/link";
+import styles from '../../styles/blog.module.scss'
+
 const today = new Date()
 const year = today.getFullYear()
-import styles from '../../styles/blog.module.scss'
 
 export default function Footer() {
   return (

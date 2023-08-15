@@ -10,6 +10,7 @@ import tecJavascript from '../../../public/tec_javascript.svg';
 import tecReact from '../../../public/tec_react.svg';
 import tecNodeJS from '../../../public/tec_nodejs.svg';
 import tecNext from '../../../public/tec_next.svg';
+// import tecAngular from '../../public/tec_angular.svg';
 // import tecPython from '../../../public/tec_python.svg';
 // import avatar from 'http://github.com/rafaelgeronimo.png'
 
@@ -46,38 +47,44 @@ export function Main() {
             width={75}
             height={75}
             src={ tecHtml5 }
-            alt="Git"
+            alt="HTML5"
           />
           <Image
             width={75}
             height={75}
             src={ tecCss3 }
-            alt="Git"
+            alt="CSS3"
           />
           <Image
             width={75}
             height={75}
             src={ tecJavascript }
-            alt="Git"
+            alt="JavaScript"
           />
           <Image
             width={75}
             height={75}
             src={ tecReact }
-            alt="Git"
+            alt="React"
           />
           <Image
             width={75}
             height={75}
             src={ tecNodeJS }
-            alt="Git"
+            alt="NodeJS"
           />
           <Image
             width={75}
             height={75}
             src={ tecNext }
-            alt="Git"
+            alt="Next"
           />
+          {/* <Image
+            width={75}
+            height={75}
+            src={ tecAngular }
+            alt="Angular"
+          /> */}
           {/* <Image
             width={75}
             height={75}
