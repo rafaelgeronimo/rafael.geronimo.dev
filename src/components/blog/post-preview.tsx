@@ -6,7 +6,7 @@ import styles from '../../styles/blog.module.scss'
 
 type PostPreviewProps = {
   slug: string
-  cover: string
+  cover?: string
   title: string
   date: string
   author: string
@@ -17,14 +17,14 @@ type PostPreviewProps = {
 export default function PostPreview ({ 
   slug, cover, title, date, author, avatar, description
  }: PostPreviewProps) {
-  return(
+  return (
     <div className={ styles.postPreview }>
       <div>
         <CoverImage slug={ slug } title={ title } src={ cover } />
       </div>
       <h3>
         <Link as={`/blog/posts/${slug}`} href="/blog/posts/[slug]">
-          <a>{ title }</a>
+          { title }
         </Link>
       </h3>
       <p>{ description }</p>
@@ -33,5 +33,5 @@ export default function PostPreview ({
       </div>
       <Avatar name={ author } picture={ avatar } />
     </div>
-  )
+  );
 }

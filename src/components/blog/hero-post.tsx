@@ -6,7 +6,7 @@ import styles from '../../styles/blog.module.scss'
 
 type HeroPostProps = {
   title: string
-  cover: string
+  cover?: string
   date: string
   description: string
   author: string
@@ -26,7 +26,7 @@ export default function HeroPost({
         <div>
           <h3>
             <Link as={`/blog/posts/${slug}`} href="/blog/posts/[slug]">
-              <a>{ title }</a>
+              { title }
             </Link>
           </h3>
           <div className={ styles.postDate }>
@@ -39,5 +39,5 @@ export default function HeroPost({
         </div>
       </div>
     </section>
-  )
+  );
 }

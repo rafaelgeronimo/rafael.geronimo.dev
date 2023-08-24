@@ -7,7 +7,7 @@ import styles from '../../styles/blog.module.scss'
 
 type PostHeaderProps = {
   title: string
-  cover: string
+  cover?: string
   date: string
   author: string
   avatar: string

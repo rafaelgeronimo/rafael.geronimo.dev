@@ -1,8 +1,9 @@
 import Container from "./container";
 import Link from "next/link";
+import styles from '../../styles/blog.module.scss'
+
 const today = new Date()
 const year = today.getFullYear()
-import styles from '../../styles/blog.module.scss'
 
 export default function Footer() {
   return (
@@ -14,14 +15,14 @@ export default function Footer() {
           </h3>
           <div>
             <Link href={`/`}>
-              <a>Home</a>
+              Home
             </Link>
             <Link href={`/blog`}>
-              <a>Blog</a>
+              Blog
             </Link>
           </div>
         </div>
       </Container>
     </footer>
-  )
+  );
 }

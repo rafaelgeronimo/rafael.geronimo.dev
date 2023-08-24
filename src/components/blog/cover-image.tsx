@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import styles from '../../styles/blog.module.scss'
 
@@ -22,12 +22,12 @@ export default function CoverImage({ title, src, slug }: CoverImageProps) {
   return (
     <div className={ styles.coverImage }>
       {slug ? (
-        <Link as={`/blog/posts/${slug}`} href='/blog/posts/[slug]'>
-          <a aria-label={title}>{image}</a>
+        <Link as={`/blog/posts/${slug}`} href='/blog/posts/[slug]' aria-label={title}>
+          {image}
         </Link>
       ) : (
         image
       )}
     </div>
-  )
+  );
 }

@@ -1,5 +1,5 @@
 // import styles from './about.module.scss';
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/about.module.scss";
 import profilePic from "../../img/profile.png";
 import Link from "next/link";
@@ -35,7 +35,7 @@ export default function About() {
         <p className={`animate__animated animate__bounceIn`}>
           Em abril de 2022, fui descoberto pela{" "}
           <Link href={`https://wolven.com.br`}>
-            <a>Wolven</a>
+            Wolven
           </Link>
           , onde trabalho como desenvolvedor de softwares.
         </p>
