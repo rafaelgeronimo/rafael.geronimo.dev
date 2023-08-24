@@ -1,32 +1,29 @@
 //********* */ https://github.com/Solomon04/nextjs-notion-blog/blob/main/pages/post/%5Bslug%5D.tsx ***********//
 
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
-import Head from 'next/head'
+import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { useRouter } from "next/router";
+import ErrorPage from "next/error";
+import Head from "next/head";
 
-import NotionService from '../../../services/notion-service'
-import Layout from '../../../components/blog/layout'
-import Container from '../../../components/blog/container'
-import Header from '../../../components/blog/header'
-import PostHeader from '../../../components/blog/post-header'
-import PostTitle from '../../../components/blog/post-title'
-import PostBody from '../../../components/blog/post-body'
-import markdownToHtml from '../../../lib/markdownToHtml'
-import styles from '../../../styles/blog.module.scss'
+import NotionService from "../../../services/notion-service";
+import Layout from "../../../components/blog/layout";
+import Container from "../../../components/blog/container";
+import Header from "../../../components/blog/header";
+import PostHeader from "../../../components/blog/post-header";
+import PostTitle from "../../../components/blog/post-title";
+import PostBody from "../../../components/blog/post-body";
+import markdownToHtml from "../../../lib/markdownToHtml";
+import styles from "../../../styles/blog.module.scss";
 
-
-const Post = ({ content, post }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  // console.log('Está na pagina do post');
-  // console.log('Tipo do conteúdo recebido: ', typeof(content));
-  console.log('Conteúdo recebido: ', content);
-  
-  const router = useRouter()
+const Post = ({
+  content,
+  post,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const router = useRouter();
   if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
+    return <ErrorPage statusCode={404} />;
   }
-  
+
   return (
     <Layout>
       <Container>
@@ -35,12 +32,10 @@ const Post = ({ content, post }: InferGetStaticPropsType<typeof getStaticProps>)
           <PostTitle>Carregando...</PostTitle>
         ) : (
           <>
-            <article className={ styles.post }>
+            <article className={styles.post}>
               <Head>
-                <title>
-                  {post.title}
-                </title>
-                <meta property='og:image' content={post.cover} />
+                <title>{post.title}</title>
+                <meta property="og:image" content={post.cover} />
               </Head>
               <PostHeader
                 title={post.title}
@@ -51,57 +46,41 @@ const Post = ({ content, post }: InferGetStaticPropsType<typeof getStaticProps>)
                 avatar={post.avatar}
               />
               <PostBody content={content} />
-              {/* <ReactMarkdown className={ styles.postBody }>
-                {markdown}
-              </ReactMarkdown> */}
-              <ReactMarkdown>{content}</ReactMarkdown>
             </article>
           </>
         )}
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 type Params = {
   params: {
-    slug: string
-  }
-}
+    slug: string;
+  };
+};
 
 export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
-  const notionService = new NotionService()
-  const p = await notionService.getSingleBlogPost(params?.slug)
-  
-  // console.log('PPPPPPPPPPPPP: ', p);  
-  
+  const notionService = new NotionService();
+  const p = await notionService.getSingleBlogPost(params?.slug);
+
   if (!p) {
-    throw new Error('Post not found')
+    throw new Error("Post not found");
   }
-  const content = await markdownToHtml(p.markdown || '')
+  const post_content = p.markdown.parent;
+  const content = await markdownToHtml(post_content || "");
   return {
     props: {
-      // markdown: p.markdown,
-      // post: p.post
       post: p.post,
       content,
-    }
-  }
-}
+    },
+  };
+};
 
 export async function getStaticPaths() {
-  const notionService = new NotionService()
-  
-  const posts = await notionService.getPublishedBlogPosts()
-  
-  // const paths = posts.map(post => {
-  //   return `/posts/${post.slug}`
-  // })
+  const notionService = new NotionService();
 
-  // return {
-  //   paths,
-  //   fallback: false
-  // }
+  const posts = await notionService.getPublishedBlogPosts();
 
   return {
     paths: posts.map((post) => {
@@ -109,10 +88,10 @@ export async function getStaticPaths() {
         params: {
           slug: post.slug,
         },
-      }
+      };
     }),
     fallback: false,
-  }
+  };
 }
 
-export default Post
+export default Post;

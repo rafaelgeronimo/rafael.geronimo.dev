@@ -7,6 +7,7 @@ module.exports = {
       'storage.googleapis.com',
       'rafael.geronimo.dev',
       'www.notion.so',
+      'i.postimg.cc',
       'lh6.googleusercontent.com',
       's3-us-west-2.amazonaws.com',
     ],

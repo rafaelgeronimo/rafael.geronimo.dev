@@ -25,7 +25,7 @@ export function Main() {
           alt="Rafael Geronimo Avatar"
         />
         <h1>Rafael Gerônimo</h1>
-        <h3>Desenvolvedor Web Jr.</h3>
+        <h3>Desenvolvedor Web</h3>
       </section>
       <p className="animate__animated animate__bounceIn">Formado pela Trybe como desenvolvedor de aplicações para web e em Sistema para Internet pela
         Unicesumar, tenho sempre buscado aperfeiçoar os meus conhecimentos na área para que possa
